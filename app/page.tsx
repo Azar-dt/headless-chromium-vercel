@@ -1,9 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div>
+        <button
+          onClick={async () => {
+            await fetch("/api/hello");
+          }}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#0070f3",
+            border: "1px solid #0070f3",
+            fontSize: "1.2rem",
+            cursor: "pointer",
+          }}
+        >
+          gen pdf
+        </button>
+      </div>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
